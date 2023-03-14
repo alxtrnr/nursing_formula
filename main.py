@@ -5,9 +5,7 @@ def display_intro():
     st.title('NursingCalc: Your Medication Dosage Calculator using the Nursing Formula')
     st.write("""
 Medication administration is a core competency for all nurses in every clinical setting. A key skill required to safely 
-dispense drugs is the ability to perform accurate dosage calculations. New technologies such as bar code administration 
-and smart infusion pumps have helped to reduce medication errors, however nurses cannot rely completely on these 
-advances.
+dispense drugs is the ability to perform accurate dosage calculations.
 
 In the nursing formula (or “desired over have method”), the desired amount (dose) is the dose  prescribed and the amount 
 on hand (available dose) or the amount you “have” is the available dose or concentration. The quantity is the form and amount in 
@@ -52,6 +50,29 @@ def display_output(dose, available_dose, quantity, amount_to_administer):
         st.write("")
 
 
+def outro_block():
+    st.write("Check that your answer makes sense clinically. Triple check your work. Have a colleague or pharmacist "
+             "check your work. Know general therapeutic drug doses for commonly administered medications.")
+
+
+def disclaimer():
+    st.markdown("""
+    <style>
+    .small-font {
+        font-size:9px !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    st.markdown('<p class="small-font">DISCLAIMER: This medication dosage calculator using the nursing formula is '
+                'intended for educational purposes only and is not a substitute for professional medical advice, '
+                'diagnosis, or treatment. The user assumes full responsibility and risk for the use of this '
+                'calculator. The authors and developers of this calculator are not liable for any damages or losses '
+                'arising from the use of this calculator or the information provided by it. Always consult a '
+                'qualified healthcare professional before making any medical decisions or administering '
+                'medications.</p>', unsafe_allow_html=True)
+
+
 def the_nursing_formula():
     ''' the ‘nursing formula': volume to administer  = dose required (what you want) * volume of solution (what you got)
      / solution strength (what is in it)’'''
@@ -70,6 +91,13 @@ def the_nursing_formula():
 
     # Display output
     display_output(dose, available_dose, quantity, amount_to_administer)
+
+    # Display outro
+    outro_block()
+
+    # Display disclaimer
+    disclaimer()
+
 
 
 if __name__ == '__main__':
