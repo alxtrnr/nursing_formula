@@ -12,7 +12,7 @@ NursingCalc is a web app for medication dosage calculation using the nursing for
 1. Clone the repository:
 
 ```
-git clone https://github.com/exampleuser/NursingCalc.git
+git clone https://github.com/alxtrnr/nursing_formula.git
 ```
 
 2. Install the required dependencies:
