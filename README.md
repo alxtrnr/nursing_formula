@@ -30,6 +30,7 @@ streamlit run nursingcalc.py
 ```
 
 This will start a local web server and open the app in a browser window. Enter the required inputs in the app and click on the 'Calculate' button to view the calculated amount.
+The app can be used on any device with a web browser. See [NursingCalc](https://alxtrnr-nursing-formula-main-1io4ny.streamlit.app/) for a live demo.
 
 ## Contributing
 
