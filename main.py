@@ -21,7 +21,7 @@ def the_nursing_formula():
 
     # output block
     st.subheader('THE NURSING FORMULA')
-    form = f'Volume to administer = {dose_required}mg (what you want) x {vol_solution}ml (what you got) / {dose_available}mg (what\'s in it)'
+    form = f'{dose_required}mg (what you want) x {vol_solution}ml (what you got) / {dose_available}mg (what\'s in it)'
     st.write(form)
 
     st.write(f'Volume to administer = {vol_to_administer}ml')
